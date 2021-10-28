@@ -14,7 +14,7 @@ void setup() {
     while(1);
   }
   //Modo de operação:
-  ccs.setDriveMode(CCS811_DRIVE_MODE_1SEC);
+  ccs.setDriveMode(CCS811_DRIVE_MODE_60SEC);
   // Wait for the sensor to be ready
   while(!ccs.available());
 }
