@@ -83,6 +83,23 @@ void loop() {
         digitalWrite(9, LOW); 
         digitalWrite(8,HIGH);
       }
+
+      // concentração muito elevada, alarme mais frequente
+      if(ccs.geteCO2() < 3000 && danger == true){
+        digitalWrite(10, HIGH);  
+        digitalWrite(8,LOW);
+        digitalWrite(10, HIGH);
+        delay(1000);
+        digitalWrite(10, LOW);
+        delay(500);
+        digitalWrite(10, HIGH);
+        delay(1000);
+        digitalWrite(10, LOW);
+        delay(500);
+        digitalWrite(10, HIGH);
+        delay(1600);
+        digitalWrite(10, LOW);
+      }
       Serial.print("ppm, TVOC: ");
       Serial.println(ccs.getTVOC());
     }
