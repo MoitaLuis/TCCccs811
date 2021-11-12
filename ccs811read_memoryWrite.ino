@@ -85,7 +85,7 @@ void loop() {
       }
 
       // concentração muito elevada, alarme mais frequente
-      if(ccs.geteCO2() < 3000 && danger == true){
+      if(ccs.geteCO2() > 3000 && danger == true){
         digitalWrite(10, HIGH);  
         digitalWrite(8,LOW);
         digitalWrite(10, HIGH);
